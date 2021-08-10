@@ -7,10 +7,10 @@ const Header = () => {
       <h1>Library Book Management</h1>
       <hr />
       <div className="links">
-        <NavLink to="/" className="link" activeClassName="active" exact>
+        <NavLink to="/" id="list" className="link" activeClassName="active" exact>
           Books List
         </NavLink>
-        <NavLink to="/add" className="link" activeClassName="active">
+        <NavLink to="/add" id="add" className="link" activeClassName="active">
           Add Book
         </NavLink>
       </div>

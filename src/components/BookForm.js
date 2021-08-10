@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { v4 as uuidv4 } from 'uuid';
 
 const BookForm = (props) => {
     const [book, setBook] = useState(() => {
         return {
-          bookname: props.book ? props.book.bookname : '',
+          isbn: props.isbn ? props.book.isbn: '',
+          name: props.book ? props.book.name : '',
           author: props.book ? props.book.author : '',
           quantity: props.book ? props.book.quantity : '',
           price: props.book ? props.book.price : '',
@@ -14,11 +14,11 @@ const BookForm = (props) => {
       });
 
   const [errorMsg, setErrorMsg] = useState('');
-  const { bookname, author, price, quantity } = book;
+  const { isbn, name, author, price, quantity } = book;
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    const values = [bookname, author, price, quantity];
+    const values = [isbn, name, author, price, quantity];
     let errorMsg = '';
 
     const allFieldsFilled = values.every((field) => {
@@ -28,8 +28,9 @@ const BookForm = (props) => {
 
     if (allFieldsFilled) {
       const book = {
-        id: uuidv4(),
-        bookname,
+        id: (Math.random() * 46656) | 0,
+        isbn,
+        name,
         author,
         price,
         quantity,
@@ -73,13 +74,24 @@ const BookForm = (props) => {
     <div className="main-form">
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <Form onSubmit={handleOnSubmit}>
+        <Form.Group controlId="isbn">
+          <Form.Label>ISBN</Form.Label>
+          <Form.Control
+            className="input-control"
+            type="text"
+            name="isbn"
+            value={isbn}
+            placeholder="Enter ISBN of book"
+            onChange={handleInputChange}
+          />
+        </Form.Group>
         <Form.Group controlId="name">
           <Form.Label>Book Name</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
-            name="bookname"
-            value={bookname}
+            name="name"
+            value={name}
             placeholder="Enter name of book"
             onChange={handleInputChange}
           />

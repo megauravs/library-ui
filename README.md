@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+<h1 align="center">Library UI</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<!-- Status -->
 
-In the project directory, you can run:
+<h4 align="center"> 
+	🚧  Library Ui 🚀 Under construction...  🚧
+</h4> 
 
-### `yarn start`
+<hr>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `yarn test`
+## :dart: About ##
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We have developed a Library Book Management software which includes following,
 
-### `yarn build`
+-	Back-end Server: REST API using Spring Boot, Java.
+-	Frond-end App: React web app
+-	Database: MySQL 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :sparkles: Features ##
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+:heavy_check_mark: Add book to the library database
+This feature allow user to add any kind of books to the library database, which will be also accessible to other users;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+:heavy_check_mark: Search any book in the library database
+This feature is intended to allow user to search all books and any book by its id, name or author;
 
-### `yarn eject`
+:heavy_check_mark: Update/delete book from the library database
+This feature enable user to update any information related to the book or delete the book from the library database;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :rocket: Technologies ##
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The following tools were used in this project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Node.js](https://nodejs.org/en/) v12
+- [React](https://pt-br.reactjs.org/) 
+- [Jest](https://jestjs.io/) v27.0
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :white_check_mark: Requirements ##
 
-## Learn More
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## :checkered_flag: Starting ##
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# Clone this project
+$ git clone https://github.com/megauravs/library-ui
 
-### Code Splitting
+# Access
+$ cd library-ui
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Install dependencies
+$ yarn
 
-### Analyzing the Bundle Size
+# Run the project
+$ yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Run the Unit Tests
+$ yarn test
 
-### Making a Progressive Web App
+# The server will initialize in the <http://localhost:3000>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## :memo: License ##
 
-### Advanced Configuration
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+Made with :heart: by <a href="https://github.com/megauravs" target="_blank">Gaurav Shinde</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+&#xa0;
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="#top">Back to top</a>

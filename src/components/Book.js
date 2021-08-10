@@ -4,7 +4,8 @@ import { Button, Card } from 'react-bootstrap';
 
 const Book = ({
   id,
-  bookname,
+  isbn,
+  name,
   author,
   price,
   quantity,
@@ -15,9 +16,10 @@ const Book = ({
   return (
     <Card style={{ width: '18rem' }} className="book">
       <Card.Body>
-        <Card.Title className="book-title">{bookname}</Card.Title>
+        <Card.Title className="book-title">{name}</Card.Title>
         <div className="book-details">
           <div>Author: {author}</div>
+          <div>ISBN: {isbn}</div>
           <div>Quantity: {quantity} </div>
           <div>Price: {price} </div>
           <div>Date: {new Date(date).toDateString()}</div>

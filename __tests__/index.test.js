@@ -2,9 +2,11 @@ import AppRouter from '../src/router/AppRouter';
 import React from 'react';
 import { mount } from 'enzyme';
 
-test('TodoComponent renders the text inside it', () => {
+describe("Homepage", () => {
+  it.only('TodoComponent renders the text inside it', () => {
     const wrapper = mount(
       <AppRouter />
     );
     expect(wrapper).toMatchSnapshot();
   });
+});

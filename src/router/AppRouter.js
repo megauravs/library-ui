@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 import AddBook from '../components/AddBook';
@@ -8,7 +9,16 @@ import EditBook from '../components/EditBook';
 import BooksContext from '../context/BooksContext';
 
 const AppRouter = () => {
-  const [books, setBooks] = useLocalStorage('books', []);
+  const [books, setBooks] = useState([]);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/api/v1/books")
+    .then(response => setBooks(response.data))
+    .catch(error => {
+      setErrorMessage(error);
+      console.error('There was an error!', error.message);
+  })}, []);
 
   return (
     <BrowserRouter>
